@@ -24,7 +24,7 @@
 <p>GET /api/categories</p>
 <p>Authorization: Bearer YOUR_API_KEY</p>
 <p>Accept: application/json</p>
-<p>```{ per_page:5 }```</p>
+```{ per_page:5 }```
 
 <p>Response</p>
 <p>200 ok</p>
