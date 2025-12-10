@@ -14,22 +14,21 @@
 <li>you have to enter your database info int the env file</li>
 </ul>
 <h2>API endpoints</h2>
+
 <h4>getAllCategories endpoint</h4>
-<p>GET http://127.0.0.1:8000/api/categories<p>
+<p>GET http://127.0.0.1:8000/api/categories</p>
 <p>Description : List all categories with pagination</p>
-<p>Example : </p>
-<p>
+<p>Example :</p>
+
 <p>Request</p>
-Get /api/categories
-Authorization: Bearer YOUR_API_KEY
-Accept: application/json
-{
-    per_page:5  //the number of categories per page
-}
-</p>
+<p>GET /api/categories</p>
+<p>Authorization: Bearer YOUR_API_KEY</p>
+<p>Accept: application/json</p>
+<p>{ per_page:5 }</p>
+
 <p>Response</p>
+<p>200 ok</p>
 <p>
-200 ok
 [
     {
         "current_page": 1,
@@ -139,51 +138,25 @@ Accept: application/json
         "from": 1,
         "last_page": 1,
         "last_page_url": "http://127.0.0.1:8000/api/categories?page=1",
-        "links": [
-            {
-                "url": null,
-                "label": "&laquo; Previous",
-                "page": null,
-                "active": false
-            },
-            {
-                "url": "http://127.0.0.1:8000/api/categories?page=1",
-                "label": "1",
-                "page": 1,
-                "active": true
-            },
-            {
-                "url": null,
-                "label": "Next &raquo;",
-                "page": null,
-                "active": false
-            }
-        ],
         "next_page_url": null,
-        "path": "http://127.0.0.1:8000/api/categories",
         "per_page": 10,
-        "prev_page_url": null,
-        "to": 10,
         "total": 10
     }
-]</p>
+]
+</p>
 
 <h4>getCategory endpoint</h4>
-<p>GET http://127.0.0.1:8000/api/categories/{id}<p>
+<p>GET http://127.0.0.1:8000/api/categories/{id}</p>
 <p>Description : Get single category</p>
-<p>Example : </p>
-<p>
+
 <p>Request</p>
-Get /api/categories/6
-Authorization: Bearer YOUR_API_KEY
-Accept: application/json
-{
-   
-}
-</p>
+<p>GET /api/categories/6</p>
+<p>Authorization: Bearer YOUR_API_KEY</p>
+<p>Accept: application/json</p>
+
 <p>Response</p>
+<p>200 ok</p>
 <p>
-200 ok
 {
     "id": 6,
     "name": "Finance & Budgeting",
@@ -193,81 +166,54 @@ Accept: application/json
     "image_seed_offset": "12",
     "created_at": "2025-12-09T15:18:50.000000Z",
     "updated_at": "2025-12-09T15:18:50.000000Z"
-}<p>
-
-<h4>getAllTasks endpoint</h4>
-<p>GET http://127.0.0.1:8000/api/tasks<p>
-<p>Description : List all tasks with filters and pagination</p>
-<p>Example : </p>
-<p>
-<p>Request</p>
-Get /api/categories
-Authorization: Bearer YOUR_API_KEY
-Accept: application/json
-{
-   priority:high  //filter by high priority
-   category_id:3 //filter by category id =3
-   completed:0  //filter by not completed
-   sort:asc     //sorty by created at in ascending order
-   per_page:5   //the number of tasks per page
 }
 </p>
+
+
+<h4>getAllTasks endpoint</h4>
+<p>GET http://127.0.0.1:8000/api/tasks</p>
+<p>Description : List all tasks with filters and pagination</p>
+
+<p>Request</p>
+<p>GET /api/tasks</p>
+<p>Authorization: Bearer YOUR_API_KEY</p>
+<p>Accept: application/json</p>
+<p>{
+   priority:high,
+   category_id:3,
+   completed:0,
+   sort:asc,
+   per_page:5
+}</p>
+
 <p>Response</p>
+<p>200 ok</p>
 <p>
-200 ok
 [
     {
         "current_page": 1,
         "data": [],
         "first_page_url": "http://127.0.0.1:8000/api/tasks?page=1",
-        "from": null,
         "last_page": 1,
-        "last_page_url": "http://127.0.0.1:8000/api/tasks?page=1",
-        "links": [
-            {
-                "url": null,
-                "label": "&laquo; Previous",
-                "page": null,
-                "active": false
-            },
-            {
-                "url": "http://127.0.0.1:8000/api/tasks?page=1",
-                "label": "1",
-                "page": 1,
-                "active": true
-            },
-            {
-                "url": null,
-                "label": "Next &raquo;",
-                "page": null,
-                "active": false
-            }
-        ],
-        "next_page_url": null,
-        "path": "http://127.0.0.1:8000/api/tasks",
         "per_page": 5,
-        "prev_page_url": null,
-        "to": null,
         "total": 0
     }
 ]
 </p>
-<h4>getTask endpoint</h4>
-<p>GET http://127.0.0.1:8000/api/tasks/{id}<p>
-<p>Description : Get single task</p>
-<p>Example : </p>
-<p>
-<p>Request</p>
-Get /api/tasks/2
-Authorization: Bearer YOUR_API_KEY
-Accept: application/json
-{
 
-}
-</p>
+
+<h4>getTask endpoint</h4>
+<p>GET http://127.0.0.1:8000/api/tasks/{id}</p>
+<p>Description : Get single task</p>
+
+<p>Request</p>
+<p>GET /api/tasks/2</p>
+<p>Authorization: Bearer YOUR_API_KEY</p>
+<p>Accept: application/json</p>
+
 <p>Response</p>
+<p>200 ok</p>
 <p>
-200 ok
 {
     "id": 2,
     "title": "run",
@@ -282,73 +228,60 @@ Accept: application/json
 }
 </p>
 
-<h4>getAllCategories endpoint</h4>
-<p>POSY http://127.0.0.1:8000/api/tasks<p>
+
+<h4>createTask endpoint</h4>
+<p>POST http://127.0.0.1:8000/api/tasks</p>
 <p>Description : Create new task</p>
-<p>Example : </p>
-<p>
+
 <p>Request</p>
-POST /api/tasks
-Authorization: Bearer YOUR_API_KEY
-Accept: application/json
-{
-    title:hjhfdhsf
-    description:jog for ten meters
-    priority:high
-    category_id:5
-    due_date:2025-01-15
-    completed:0
+<p>POST /api/tasks</p>
+<p>Authorization: Bearer YOUR_API_KEY</p>
+<p>Accept: application/json</p>
+<p>{
+    title:hjhfdhsf,
+    description:jog for ten meters,
+    priority:high,
+    category_id:5,
+    due_date:2025-01-15,
+    completed:0,
     image_url:
-}
-</p>
+}</p>
+
 <p>Response</p>
-<p>
-201 created
-{
-    "message": "Task created successfully"
-}
-</p>
+<p>201 created</p>
+<p>{ "message": "Task created successfully" }</p>
+
 
 <h4>updateTask endpoint</h4>
-<p>PATCH http://127.0.0.1:8000/api/tasks<p>
+<p>PATCH http://127.0.0.1:8000/api/tasks/{id}</p>
 <p>Description : Update existing task</p>
-<p>Example : </p>
-<p>
-<p>Request</p>
-PATCH /api/tasks
-Authorization: Bearer YOUR_API_KEY
-Accept: application/json
-{
-    title:hjhfdhsf   //you can add only the values you want to change to the request
-    description:jog for ten meters
-    priority:high
-    category_id:5
-    due_date:2025-01-15
-    completed:0
-    image_url:
-}
-</p>
-<p>Response</p>
-<p>
-200 ok
-{
-    "message": "Task updated successfully"
-}
-</p>
-<h4>deleteTask endpoint</h4>
-<p>DELETE http://127.0.0.1:8000/api/tasks/{id}<p>
-<p>Description : Delete task</p>
-<p>Example : </p>
-<p>
-<p>Request</p>
-DELETE /api/tasks/5
-Authorization: Bearer YOUR_API_KEY
-Accept: application/json
-{
 
-}
-</p>
+<p>Request</p>
+<p>PATCH /api/tasks/2</p>
+<p>Authorization: Bearer YOUR_API_KEY</p>
+<p>Accept: application/json</p>
+<p>{
+    title:new title,
+    description:jog for ten meters,
+    priority:high,
+    category_id:5,
+    due_date:2025-01-15,
+    completed:0
+}</p>
+
 <p>Response</p>
-<p>
-204 no content
-</p>
+<p>200 ok</p>
+<p>{ "message": "Task updated successfully" }</p>
+
+
+<h4>deleteTask endpoint</h4>
+<p>DELETE http://127.0.0.1:8000/api/tasks/{id}</p>
+<p>Description : Delete task</p>
+
+<p>Request</p>
+<p>DELETE /api/tasks/5</p>
+<p>Authorization: Bearer YOUR_API_KEY</p>
+<p>Accept: application/json</p>
+
+<p>Response</p>
+<p>204 no content</p>
