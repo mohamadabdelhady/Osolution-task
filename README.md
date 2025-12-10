@@ -3,7 +3,7 @@
 <li>Open command line inside the project</li>
 <li>type command "composer install"</li>
 <li>type command "cp .env.example .env"</li>
-<li>type command "php artisan key:generate"</li>
+</li>type command "php artisan key:generate"</li>
 <li>type command "php artisan migrate"</li>
 <li>type command "php artisan db:seed --class=CategorySeeder"
 <li>type command "php artisan serve" and make sure it is running on "http://127.0.0.1:8000"
@@ -24,11 +24,14 @@
 <p>GET /api/categories</p>
 <p>Authorization: Bearer YOUR_API_KEY</p>
 <p>Accept: application/json</p>
-```{ per_page:5 }```
+
+```
+{ per_page:5 }
+```
 
 <p>Response</p>
 <p>200 ok</p>
-<p>
+
 ```
 [
     {
@@ -145,8 +148,8 @@
     }
 ]
 ```
-</p>
 
+<hr>
 <h4>getCategory endpoint</h4>
 <p>GET http://127.0.0.1:8000/api/categories/{id}</p>
 <p>Description : Get single category</p>
@@ -158,7 +161,7 @@
 
 <p>Response</p>
 <p>200 ok</p>
-<p>
+
 ```
 {
     "id": 6,
@@ -171,9 +174,8 @@
     "updated_at": "2025-12-09T15:18:50.000000Z"
 }
 ```
-</p>
 
-
+<hr>
 <h4>getAllTasks endpoint</h4>
 <p>GET http://127.0.0.1:8000/api/tasks</p>
 <p>Description : List all tasks with filters and pagination</p>
@@ -182,17 +184,20 @@
 <p>GET /api/tasks</p>
 <p>Authorization: Bearer YOUR_API_KEY</p>
 <p>Accept: application/json</p>
-<p>```{
+
+```
+{
    priority:high,
    category_id:3,
    completed:0,
    sort:asc,
    per_page:5
-}```</p>
+}
+```
 
 <p>Response</p>
 <p>200 ok</p>
-<p>
+
 ```
 [
     {
@@ -205,9 +210,8 @@
     }
 ]
 ```
-</p>
 
-
+<hr>
 <h4>getTask endpoint</h4>
 <p>GET http://127.0.0.1:8000/api/tasks/{id}</p>
 <p>Description : Get single task</p>
@@ -219,7 +223,7 @@
 
 <p>Response</p>
 <p>200 ok</p>
-<p>
+
 ```
 {
     "id": 2,
@@ -234,9 +238,8 @@
     "updated_at": "2025-12-09T15:59:11.000000Z"
 }
 ```
-</p>
 
-
+<hr>
 <h4>createTask endpoint</h4>
 <p>POST http://127.0.0.1:8000/api/tasks</p>
 <p>Description : Create new task</p>
@@ -245,7 +248,9 @@
 <p>POST /api/tasks</p>
 <p>Authorization: Bearer YOUR_API_KEY</p>
 <p>Accept: application/json</p>
-<p>```{
+
+```
+{
     title:hjhfdhsf,
     description:jog for ten meters,
     priority:high,
@@ -253,13 +258,17 @@
     due_date:2025-01-15,
     completed:0,
     image_url:
-}```</p>
+}
+```
 
 <p>Response</p>
 <p>201 created</p>
-<p>{ "message": "Task created successfully" }</p>
 
+```
+{ "message": "Task created successfully" }
+```
 
+<hr>
 <h4>updateTask endpoint</h4>
 <p>PATCH http://127.0.0.1:8000/api/tasks/{id}</p>
 <p>Description : Update existing task</p>
@@ -268,20 +277,26 @@
 <p>PATCH /api/tasks/2</p>
 <p>Authorization: Bearer YOUR_API_KEY</p>
 <p>Accept: application/json</p>
-<p>```{
+
+```
+{
     title:new title,
     description:jog for ten meters,
     priority:high,
     category_id:5,
     due_date:2025-01-15,
     completed:0
-}```</p>
+}
+```
 
 <p>Response</p>
 <p>200 ok</p>
-<p>{ "message": "Task updated successfully" }</p>
 
+```
+{ "message": "Task updated successfully" }
+```
 
+<hr>
 <h4>deleteTask endpoint</h4>
 <p>DELETE http://127.0.0.1:8000/api/tasks/{id}</p>
 <p>Description : Delete task</p>
