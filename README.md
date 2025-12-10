@@ -13,6 +13,10 @@
 <li>if you want to set app api key insted of the default you shoukd add "API_KEY" to the env file</li>
 <li>you have to enter your database info int the env file</li>
 </ul>
+
+<h2>How to test the API</h2>
+<p>You can use any API testing tool like Postman or Insomnia to test the API endpoints</p>
+<p>the postman collection is included in the project root folder with the name "Osolution-task.postman_collection.json"</p>
 <h2>API endpoints</h2>
 
 <h4>getAllCategories endpoint</h4>
